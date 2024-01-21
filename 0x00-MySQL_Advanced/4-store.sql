@@ -1,8 +1,9 @@
 -- This script creates a trigger that decreases the quantity of an 
 -- item adding a new order.
-DROP TRIGGER IF EXISTS decreaced_quantity;
+
+DROP TRIGGER IF EXISTS reduce_quantity;
 DELIMITER $$
-CREATE TRIGGER decreased_quantity
+CREATE TRIGGER reduce_quantity
 AFTER INSERT ON orders
 FOR EACH ROW
 BEGIN
